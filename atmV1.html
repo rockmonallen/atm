@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ATM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="atm.css" />
+    <script src="atm.js"></script>
+</head>
+<body>
+    <h1>ATM</h1>
+    <!--Accept a card , take a pin code (assume always correct) , ask how much they want , check balance if you have a enough despense-->
+    <ol>
+        <li>Have function that takes card then saves the card number , card exp date , and card code. </li>
+        <li>Check and see if the card code is on file in whatever data-base my atm/bank codes are in</li>
+        <li>If the card is on file prompt to the screen the amout choices you can choose to despense</li>
+        <li>Once the user has chosen their amount check to see if that balance is avaiable in their account</li>
+        <li>If that amount is in their account use a function to send cash out of the Atm</li>
+        <li>SET pincode equal to zero</li>
+        <li>SET amount equal to zero</li>
+        <li>SET card equal to zero</li>
+        <li>SET initialbalance to zero</li>
+        <li>SET amountdespensed to zero</li>
+
+        <li>"DISPLAY" Please Enter Your Card </li>
+        <li>IF pincode or other information is in atm database
+            Once card is entered var pincode = cardcode
+            Else:
+            DISPLAY "We dont have this card on file"
+        </li>
+        <li>"Input" User choice of cash wanted back = AmountOfDespense</li>
+        <li>IF "balance is ok"</li>
+        <li>DISPLAY "Despensing Funds."</li>
+        <li>ELSE</li>
+        <li>DISPLAY "You have insufficient funds"</li>
+        <li>Once input has been chosen Call Function For Check Balance</li>
+        <li>Display "Would you like to check balance of your account</li>
+        <li>If input is yes
+            var balance = intial balance - amountdespensed 
+
+            Else:
+            Display "Have a good day bye"
+        </li>
+
+        <h2>MODULES</h2>
+        <h3>MODULE checkBalance ACCEPTS card number , amount</h3>
+        <ul>
+            <li>Set balance equal to zero</li>
+            <li>Set balance equal to CALL getUserAccount PASS card number</li>
+            <li>If balance is greater than amount</li>
+            <li>Return True</li>
+            <li>ELSE</li>
+            <li>Return False</li>
+        </ul>
+        <h3>MODULE getUserAccount ACCEPTS card Number</h3>
+            <ul>
+                <li>SET balance equal to zero</li>
+                <li>LOOP users accounts</li>
+                <li>IF user card number us equal to card number</li>\
+                <li>RETURN user balance</li>
+            </ul>
+    </ol>
+
+</body>
+</html>

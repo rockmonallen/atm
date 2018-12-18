@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ATM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/atmlook.css">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script> -->
+</head>
+<body>
+
+        <form action="#" onsubmit="event.preventDefault(); languagechoice();">
+                <input class="button" type="submit" value="Reset">
+        </form>
+        
+            <span class="input"></span>
+        
+            <div class="initalscreen">
+                <iframe src="https://giphy.com/embed/3o7aD3zdCMBWKN3sm4" width="315" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+            </div>
+            <div class="answer" id="output"></div>
+            <div class="recipt">
+             <p>RECIPT</p>
+             <span id="recipt"></span>
+            </div>
+        <div class="side-walk-t">
+            <div class="card">
+                <img src="" alt="">
+            </div>
+        </div>
+
+  <!--<div class="firstscreen">
+     <button class="button" onclick="languagecheck(english)">English</button>
+     <button class="button" onclick="languagecheck(spanish)">Spanish</button>
+  </div>
+
+  <div class="secondscreen">
+    <p>Do you need hearing assistance ?</p>
+    <button class="button" onclick="blindcheck(yes)">Yes</button>
+    <button class="button" onclick="blindcheck(no)">No</button>
+  </div>
+
+  <div class="thirdscreen">
+      <button class="button" onclick="cardcheck()">Enter Card</button>
+  </div>
+
+  <div class="fourthscreen">
+      <p id="input"></p>
+  <button class="button1" onclick="addInput(1)">1</button>
+  <button class="button1" onclick="addInput(2)">2</button>
+  <button class="button1" onclick="addInput(3)">3</button>
+  <button class="button1" onclick="addInput(4)">4</button>
+  <button class="button1" onclick="addInput(5)">5</button>
+  <button class="button1" onclick="addInput(6)">6</button>
+  <button class="button1" onclick="addInput(7)">7</button>
+  <button class="button1" onclick="addInput(8)">8</button>
+  <button class="button1" onclick="addInput(9)">9</button>
+  <button class="button1" onclick="addInput(0)">0</button>
+  <button class="button1" onclick="addInput(Clear)">Clear</button>
+  <button class="button1" onclick="addInput(Enter)">Enter</button>
+</div>
+
+<div class="fifthscreen">
+    <p id="input"></p>
+    <button class="button" onclick="moneyuse(widthdraw)">Widthdraw</button>
+    <button class="button" onclick="moneyuse(checkbalance)">Checkbalance</button>
+    <button class="button" onclick="moneyuse(fastcash)">FastCash</button>
+    <button class="button" onclick="moneyuse(deposit)">Deposit</button>
+</div>
+
+<div class="sixthscreen">
+    <p id="input"></p>
+    <button class="button" onclick="cORs(saving)">Saving</button>
+    <button class="button" onclick="cORs(checking)">Checking</button>
+</div>
+
+
+<div class="seventhscreen">
+    <button class="button" onclick="process(20)">20</button>
+    <button class="button" onclick="process(40)">40</button>
+    <button class="button" onclick="process(60)">60</button>
+    <button class="button" onclick="process(80)">80</button>
+    <button class="button" onclick="process(other)">Other</button>
+</div>
+
+<div class="eighthscreen">
+    <button class="button" onclick="exitatm(startover)">Start Over</button>
+    <button class="button" onclick="exitatm(balance)">Balance/Recipt</button>
+    <button class="button" onclick="exitatm(exit)">Exit</button>
+</div>-->
+<script src="atm.js"></script>
+<script>
+var yourcard = {
+        cardnumber:["4403931554790403", "5462689018224824" , "5178006772037331"] ,
+        exp:["06/24", "07/21" , "11/21" ] ,
+        pin:[7522 , 5377 , 3866] ,
+        cardbalance: 450
+        };
+
+
+
+
+function languagechoice() {
+    var output = document.getElementById('output');
+    output.innerHTML = `
+    <div class="firstscreen">
+        <p> Choose A Language </p>
+        <button class="button" onclick="languagecheck('english')">English</button>
+        <button class="button" onclick="languagecheck('spanish')">Spanish</button>
+    </div>
+    `;
+    recipt.innerText = "";
+}
+ function languagecheck(language) {
+     if (language === "english") {
+     output.innerHTML = `
+    <div class="secondscreen">
+    <p>Do you need hearing assistance ?</p>
+    <button class="button" onclick="blindcheck('yes')">Yes</button>
+    <button class="button" onclick="blindcheck('no')">No</button>
+    </div>
+    `
+    } 
+    else { 
+        output.innerHTML = "Wrong Answer Try Again";
+
+    }
+    }
+    function blindcheck(ans) {
+       
+        if (ans === "yes") {
+            output.innerHTML = "Wrong Answer Try Again";
+        }
+        else {
+            output.innerHTML = `
+            <div class="thirdscreen">
+            <button class="button" onclick="cardcheck('yourcard')">Enter Card</button>
+            </div>
+            `; 
+        }
+    }
+    function cardcheck(thecard) {
+        console.log(thecard)
+       if (thecard === 'yourcard') {
+        output.innerHTML = `
+            <div class="fourthscreen">
+            <p id="input"></p>
+            <button class="button" onclick="addInput(1)">1</button>
+            <button class="button" onclick="addInput(2)">2</button>
+            <button class="button" onclick="addInput(3)">3</button>
+            <button class="button" onclick="addInput(4)">4</button>
+            <button class="button" onclick="addInput(5)">5</button>
+            <button class="button"onclick="addInput(6)">6</button>
+            <button class="button"onclick="addInput(7)">7</button>
+            <button class="button"onclick="addInput(8)">8</button>
+            <button class="button"onclick="addInput(9)">9</button>
+            <button class="button"onclick="addInput(0)">0</button>
+            <button class="button"onclick="addInput('Clear')">Clear</button>
+            <button class="button"onclick="addInput('Enter')">Enter</button>
+            </div>
+        `;  
+        }
+        else {
+        output.innerHTML = "Wrong Answer Try Again"
+        }
+    }
+    
+    function addInput(num) {
+        console.log(num)
+        var output = document.getElementById("input");
+        if (num === "Clear") {
+            output.innerText = "";
+        } else if (num === "Enter") {
+            checkPin()
+        }else {
+            output.innerText += num;
+        }
+        
+    }
+
+    function checkPin() {
+        var input = Number(document.getElementById("input").innerText);
+        console.log(input)
+        for (i in yourcard.pin) {
+            if (input === yourcard.pin[i])   {
+                output.innerHTML = `
+                <div class="fifthscreen">
+                <p id="input"></p>
+                <button class="button" onclick="moneyuse('widthdraw')">Widthdraw</button>
+                <button class="button" onclick="moneyuse('fastcash')">FastCash</button>
+                <button class="button" onclick="moneyuse('deposite')">Deposit</button>
+                </div>
+                `
+            }
+        }
+    }
+    
+    
+    function moneyuse(action) {
+        if (action == "widthdraw") {
+        output.innerHTML = `
+        <div class="sixthscreen">
+        <p id="input"></p>
+        <button class="button" onclick="cORs('saving', 'withdrawl')">Saving</button>
+        <button class="button" onclick="cORs('checking', 'withdrawl')">Checking</button>
+        </div>
+        `
+        }
+        else if (action == "fastcash") {
+        output.innerHTML = `
+        <div class="sixthscreen">
+        <p id="input"></p>
+        <button class="button" onclick="cORs('saving', 'fastcash')">Saving</button>
+        <button class="button" onclick="cORs('checking', 'fastcash')">Checking</button>
+        </div>
+        ` 
+        }
+        else {
+        output.innerHTML = `
+        <div class="sixthscreen">
+        <p id="input"></p>
+        <button class="button" onclick="cORs('saving', 'deposite')">Saving</button>
+        <button class="button" onclick="cORs('checking', 'deposite')">Checking</button>
+        </div>
+        `
+        }
+    }
+    
+    function cORs(bankz, action) {
+        if (bankz == 'saving' && action == 'withdrawl'){
+        output.innerHTML = `
+        <div class="seventhscreen">
+        <button class="button" onclick="process(20, 'withdrawl')">20</button>
+        <button class="button" onclick="process(40, 'withdrawl')">40</button>
+        <button class="button" onclick="process(60, 'withdrawl')">60</button>
+        <button class="button" onclick="process(80, 'withdrawl')">80</button>
+        </div>
+        `
+        }
+        else if (bankz == 'checking' && action == 'withdrawl') { 
+        output.innerHTML = `<div class="seventhscreen">
+            <button class="button" onclick="process(20, 'withdrawl')">20</button>
+            <button class="button" onclick="process(40, 'withdrawl')">40</button>
+            <button class="button" onclick="process(60, 'withdrawl')">60</button>
+            <button class="button" onclick="process(80, 'withdrawl')">80</button>
+            </div>
+            `
+        } else if (bankz == 'checking' && action == 'deposite') {
+            output.innerHTML = `<div class="seventhscreen">
+            <button class="button" onclick="process(20, 'deposite')">20</button>
+            <button class="button" onclick="process(40, 'deposite')">40</button>
+            <button class="button" onclick="process(60, 'deposite')">60</button>
+            <button class="button" onclick="process(80, 'deposite')">80</button>
+            </div>
+            `
+        } else if (bankz == 'saving' && action == 'deposite') {
+            output.innerHTML = `<div class="seventhscreen">
+            <button class="button" onclick="process(20, 'deposite')">20</button>
+            <button class="button" onclick="process(40, 'deposite')">40</button>
+            <button class="button" onclick="process(60, 'deposite')">60</button>
+            <button class="button" onclick="process(80, 'deposite')">80</button>
+            </div>
+            `
+         } else if (bankz == 'checking' && action == 'fastcash') {
+            output.innerHTML = `<div class="seventhscreen">
+            <button class="button" onclick="process(20, 'fastcash')">20</button>
+            <button class="button" onclick="process(40, 'fastcash')">40</button>
+            <button class="button" onclick="process(60, 'fastcash')">60</button>
+            <button class="button" onclick="process(80, 'fastcash')">80</button>
+            </div>
+            `
+        } else if (bankz == 'saving' && action == 'fastcash') {
+            output.innerHTML = `<div class="seventhscreen">
+            <button class="button" onclick="process(20, 'fastcash')">20</button>
+            <button class="button" onclick="process(40, 'fastcash')">40</button>
+            <button class="button" onclick="process(60, 'fastcash')">60</button>
+            <button class="button" onclick="process(80, 'fastcash')">80</button>
+            </div>
+            `
+        }
+    }
+    
+    function process(num, action) {
+        var recipt = document.getElementById("recipt");
+        if (action == "withdrawl") {
+            yourcard.cardbalance -= num
+            recipt.innerText = 'You withdrew ' + num + ' from your account. You have  ' + yourcard.cardbalance + ' left.';
+        } else if (action == "deposite") {
+            yourcard.cardbalance += num
+            recipt.innerText = 'You deposited ' + num + ' from your account. You have  ' + yourcard.cardbalance + ' left.';
+        }
+        else if (action == "fastcash") {
+            yourcard.cardbalance -= num
+            recipt.innerText = 'You withdrew ' + num + ' from your account. You have  ' + yourcard.cardbalance + ' left.';
+        }
+    }
+    
+    
+
+</script>
+</body>
+</html>

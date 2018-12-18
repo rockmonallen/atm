@@ -1,0 +1,11 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    border: #fc0000;
+    background-color:#0036d9;
+    border-left: white;
+    /* border-right: solid 55px gray; */
+    border-image: url(wall.jpg);
+    border-image-width: 400px;
+}
+

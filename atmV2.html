@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ATM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="atm.css" />
+    <script src="atm.js"></script>
+</head>
+<body>
+    <h1>ATM</h1>
+    <!--Accept a card , take a pin code (assume always correct) , ask how much they want , check balance if you have a enough despense-->
+    <!--<h2>TODO</h2>
+        <ul>
+            <li>  Data Structure
+            User:
+            First Name: John
+            Last Name: Doe
+            PIN: 1234
+            Card:
+                Name: John Doe
+                Number: 4111111111111111
+                Exp: 10/19
+                Security: 321
+            Balance: 300.00</li>
+        </ul>--> 
+    <h2>Steps to Follow</h2>
+    <ol>
+        <li>Have function that takes card then saves the card number , card exp date , and card code , and Account Balance . </li>
+        <li>Check and see if the card code is on file in whatever data-base my atm/bank codes are in</li>
+        <li>If the card is on file prompt to the screen the amout choices you can choose to despense</li>
+        <li>Once the user has chosen their amount check to see if that balance is avaiable in their account</li>
+        <li>If that amount is in their account use a function to send cash out of the Atm</li>
+    </ol>    
+    <h3>VAR</h3>
+    <ul>
+        <li>SET pincode equal to zero</li>
+        <li>SET amount equal to zero</li>
+        <li>SET card equal to zero</li>
+        <li>SET initialbalance to zero</li>
+        <li>SET amountchosen to zero</li>
+        
+    </ul>
+
+    <h3>S1 Function() Display Enter Card For Reading / Language Choice / Handle Disablities<h3>
+        <ul>
+            <li>Display Do you want transaction in English ?
+                If answer is true 
+                Else:
+                Display: "Special Asstitance ?"
+                If False: Run Function 2
+                Else:
+            </li>
+        </ul>
+        
+    <h3>S2 Function() Check To See If Card Is On File<h3>
+        <ul>
+            <li>Display Insert Card</li>
+            <li>Onlick of insert card 
+             LOOP users accounts</li>
+            <li>IF user card number us equal to card number</li>\
+            <li>RETURN call function 3</li>
+            <li>Else: Display "Invaild"
+                return to S1
+            </li>
+        </ul>
+        
+
+    <h3>S2 Function() Deposit , Fast Cash or Checking Or Saving<h3>
+            <ul>
+                <li>Display " 4 Choices Deposit - FastCash - Checking - Saving</li>
+                <li> If choice = Checking or Saving or FastCash
+                    Run function3
+                </li> Else:Run Deposit/Function.
+            </ul>
+    
+    <h3>S3 Function() For Despoitsing Money into Bank Account</h3>
+
+    
+    
+    <h2>S3 Function() /Ask User How Much Money They Want Out/ Get agreement to atm fees </h2>
+    <ul>
+        <li>Display "Choices For Payment Despense</li>
+        <li>If Initialbalance/Checking Or Saving is greater than amountchosen</li>
+        <li>Display" It is 3 dollar fee for this ATM Y/N</li>
+        <li>Answer Yes</li>
+        <li>CALL Function S4</li>
+        <li>ELSE</li>
+        <li>Return Infuffiecent Funds</li>
+        <li>Reset S3</li>
+    </ul>
+
+    <h2>S4 Function() Check New Balance</h2>
+        <ul>
+            <li>Display "Please Take Cash Below . Check New Balance Y/N"</li>
+            <li>IF user choses Yes </li>
+            <li>Display " InitialBalance - AmountChosen "</li>
+            <li>Call S5</li>
+            <li>ELSE</li>
+            <li>Return S5</li>
+        </ul>
+    
+    <h3>S5 Function() Exiting The ATM Function Last Features</h3>
+    <li>Display "Three Choices Receipts , Transfer Funds , Change Pin </li>
+    <li>If Choice equal Receipts 
+        Display: A HTML REPORT OF AmountDespense or Amount Deposit . New Balance . Bank Name . Your Name And Date.
+        
+        If Choice answer = Change Pin 
+        For pins in pinlist 
+        pinlist{pins} = 
+    </li>   
+    <li>If Choice answer = Transfer Funds 
+        Display Select amount you want to send 
+        
+    </li>
+
+</body>
+</html>

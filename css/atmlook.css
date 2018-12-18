@@ -1,0 +1,112 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    border: #fc0000;
+    background-color:#0036d9;
+    border-left: white;
+    /* border-right: solid 55px gray; */
+    border-image: url(wall.jpg);
+    border-image-width: 400px;
+}
+
+.initalscreen {
+    border: 5px solid red;
+    height: 400px;
+    background-color: #fff;
+}
+
+.recipt {
+    border: 5px solid #fcc332;
+    background-color: #fff;
+    padding-bottom:50px;
+    margin-left:545px;
+    margin-top:20px;
+    width: 400px;
+    height: 100px;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #0036d9;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px red;
+    width: 189px;
+    margin-top: 12px;
+    /* display: inline-block;
+    padding: 15px 25px;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #0036d9;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px red ; */
+  }
+  
+  .button:hover {background-color: #0036d9}
+  
+  .button:active {
+    background-color: red;
+    box-shadow: 0 5px ;
+    transform: translateY(4px);
+  }
+  .answer{
+    color: red;
+    position: absolute;
+    top: 180px;
+    margin-left: 788px;}
+    .side-walk-t{
+        width: 162px;
+    height: 80px;
+    background-color: rgb(104, 113, 119);
+    border: solid rgb(206, 204, 204) 37px;
+    border-right: rgb(172, 172, 172) solid 15px;
+    border-left: rgb(172, 172, 172) solid 12px;
+    margin-left: 937px;
+    margin-top: -976px;
+    /* transition: .5s ease; */
+    }
+    .side-walk-t img{
+        width: 135px;
+        height: 173px;
+    
+    }
+    .side-walk-t:hover .card {
+        height: 173px;
+        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+
+      }
+      .card{
+        position: absolute;
+    top: 131px;
+    bottom: 0;
+    left: 1004px;
+    right: 9px;
+    /* background-color: #008CBA; */
+    overflow: hidden;
+    width: 134px;
+    height: 0;
+    transition: .5s ease;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+        /* transform: rotate(50deg) */
+    }
+    /* transform: rotateZ(180deg);
+    border-bottom: 130px solid #555;
+    border-left: 105px solid rgb(211, 180, 240);
+    border-right: 102px solid transparent;
+    height: 0px;
+    width: 988px;
+    margin-top: -423px;
+    margin-left: 222px; */

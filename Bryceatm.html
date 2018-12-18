@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ATM Pseudocode</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background: #ddd;
+            font-size: 21px;
+            padding: 0 0 60px;
+        }
+        
+        .indent {
+            margin-left: 30px;
+            list-style-type: circle; 
+        }
+        
+        .strike {
+            text-decoration: line-through;
+        }
+        .pass {
+            background: green;
+            color: #fff;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="page-header">ATM</h1>
+            </div>
+            <div class="col-sm-6">
+                <h2>TODO</h2>
+                <ul>
+                    <li class="strike">test</li>
+                    <li>make a deposit</li>
+                    <li>checking/savings</li>
+                    <li>atm fees</li>
+                    <li>language -> assume always English</li>
+                    <li>reciepts</li>
+                    <li>check balance</li>
+                    <li>fast cash</li>
+                    <li>handle disabilities</li>
+                    <li>transfer funds</li>
+                    <li>change pin</li>
+                </ul>
+                <h2>VARIABLES</h2>
+                <ul>
+                    <li>SET card equal to zero</li>
+                    <li>SET pin equal to zero</li>
+                    <li>SET amount equal to zero</li>
+                    <li>SET balance equal to zero</li>
+                </ul>
+                <h2>LOGIC</h2>
+                <h3>LANGUAGE</h3>
+                <ul>
+                    <li>...code...</li>
+                </ul>
+                <h3>ENTER CARD</h3>
+                <ul>
+                    <li>DISPLAY "Enter your card"</li>
+                    <li>INPUT card</li>
+                    <li>IF card is not ok</li>
+                    <li class="indent">DISPLAY "Card is invalid. Please try again."</li>
+                    <li class="indent">GOTO SCREEN ENTER CARD</li>
+                    <li>ELSE</li>
+                    <li class="indent">GOTO SCREEN PIN</li>
+                    <li>TODO: MOVE BELOW TO PROPER SCREENS</li>
+                    <li>DISPLAY "How much would you like to withdrawl?"</li>
+                    <li>INPUT amount</li>
+                    <li>SET balance equal to CALL checkBalance PASS card number, amount</li>
+                    <li>IF balance is true</li>
+                    <li class="indent">DISPLAY "Despensing funds. Have a nice day."</li>
+                    <li>ELSE</li>
+                    <li class="indent">DISPLAY "You have insufficient funds"</li>
+                </ul>
+                <h3>PIN</h3>
+                <ul>
+                    <li>DISPLAY "Enter your PIN code"</li>
+                    <li>INPUT pin</li>
+                    <li>IF pin is not ok</li>
+                    <li class="indent">DISPLAY "PIN is invalid. Please try again."</li>
+                    <li class="indent">GOTO PIN</li>
+                    <li>ELSE</li>
+                    <li class="indent">GOTO DASHBOARD</li>
+                </ul>
+                <h3>DASHBOARD</h3>
+                <ul>
+                    <li>...logic here...</li>
+                </ul>             
+            </div>
+            <div class="col-sm-6">
+                <h2>MODULES</h2>
+                <h3>MODULE checkBalance ACCEPTS card number, amount</h3>
+                <ul>
+                    <li>SET balance equal to zero</li>
+                    <li>SET balance equal to CALL getUserAccount PASS card number</li>
+                    <li>IF balance is greater than amount</li>
+                    <li class="indent">RETURN true</li>
+                    <li>ELSE</li>
+                    <li class="indent">RETURN false</li>
+                </ul>
+                <h3>MODULE getUserAccount ACCEPTS card number</h3>
+                <ul>
+                    <li>SET balance equal to zero</li>
+                    <!-- we would talk to external servers, but we are not -->
+                    <li>LOOP users accounts</li>
+                    <li>IF user card number is equal to card number</li>
+                    <li class="indent">RETURN balance</li>
+                </ul>
+
+                <!-- testing -->
+                <h2>TESTING</h2>
+                <ul>
+                    <li class="pass">I try to use an invalid gas card in the ATM</li>
+                    <li>I try to use an invalid PIN code</li>
+                    <li>I try to withdrawl more money than I currently have from checking.</li>
+                    <li>I try to withdrawl more money than I currently have from savings.</li>
+                    <li>ETC...</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+        Accept a card, 
+        take a pin code (assume always correct), 
+        ask how much they want, 
+        check balance 
+            if have enough 
+                dispense money 
+            else 
+                'You have insufficient funds'
+    -->
+    <!-- 
+        add in the ability to check if the card is valid or not
+        add in a check for the pin code if it is valid or not
+        set a new variable the recieve a CALL to checkBalance
+    -->
+</body>
+</html>
