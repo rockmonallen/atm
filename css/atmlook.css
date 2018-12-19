@@ -40,19 +40,7 @@ body {
     box-shadow: 0 9px red;
     width: 189px;
     margin-top: 12px;
-    /* display: inline-block;
-    padding: 15px 25px;
-    font-size: 12px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background-color: #0036d9;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px red ; */
-  }
+}
   
   .button:hover {background-color: #0036d9}
   
@@ -87,19 +75,20 @@ body {
         box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 
       }
-      .card{
+    .card{ 
         position: absolute;
-    top: 131px;
-    bottom: 0;
-    left: 1004px;
-    right: 9px;
-    /* background-color: #008CBA; */
-    overflow: hidden;
-    width: 134px;
-    height: 0;
-    transition: .5s ease;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+        top: 131px;
+        bottom: 0;
+        left: 407px;
+        right: 7px;
+        /* background-color: #008CBA; */
+        overflow: hidden;
+        width: 134px;
+        height: 0;
+        transition: .5s ease;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        /* transform: rotate(50deg); */
         /* transform: rotate(50deg) */
     }
     /* transform: rotateZ(180deg);
@@ -109,4 +98,16 @@ body {
     height: 0px;
     width: 988px;
     margin-top: -423px;
-    margin-left: 222px; */
+    margin-left: 222px; 
+     position: absolute;
+    top: 131px;
+    bottom: 0;
+    left: 1004px;
+    right: 9px;
+    /* background-color: #008CBA; 
+    overflow: hidden;
+    width: 134px;
+    height: 0;
+    transition: .5s ease;
+    border: 1px solid #ddd;
+    border-radius: 4px;*/
