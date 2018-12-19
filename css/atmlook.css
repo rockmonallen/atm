@@ -15,6 +15,13 @@ body {
     background-color: #fff;
 }
 
+.insertcard {
+    position: absolute;
+    top:50px;
+    margin-left: 390px;
+}
+
+
 .recipt {
     border: 5px solid #fcc332;
     background-color: #fff;

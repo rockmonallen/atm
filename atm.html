@@ -21,10 +21,15 @@
             <div class="initalscreen">
                 <iframe src="https://giphy.com/embed/3o7aD3zdCMBWKN3sm4" width="315" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
             </div>
-            <div class="answer" id="output"></div>
+            <div class="answer" id="output">
+            
+            </div>
             <div class="recipt">
              <p>RECIPT</p>
              <span id="recipt"></span>
+            </div>
+            <div class="insertcard">
+            <h1>Insert Card</h1>
             </div>
         <div class="side-walk-t">
             <div class="card">
@@ -32,65 +37,7 @@
             </div>
         </div>
 
-  <!--<div class="firstscreen">
-     <button class="button" onclick="languagecheck(english)">English</button>
-     <button class="button" onclick="languagecheck(spanish)">Spanish</button>
-  </div>
 
-  <div class="secondscreen">
-    <p>Do you need hearing assistance ?</p>
-    <button class="button" onclick="blindcheck(yes)">Yes</button>
-    <button class="button" onclick="blindcheck(no)">No</button>
-  </div>
-
-  <div class="thirdscreen">
-      <button class="button" onclick="cardcheck()">Enter Card</button>
-  </div>
-
-  <div class="fourthscreen">
-      <p id="input"></p>
-  <button class="button1" onclick="addInput(1)">1</button>
-  <button class="button1" onclick="addInput(2)">2</button>
-  <button class="button1" onclick="addInput(3)">3</button>
-  <button class="button1" onclick="addInput(4)">4</button>
-  <button class="button1" onclick="addInput(5)">5</button>
-  <button class="button1" onclick="addInput(6)">6</button>
-  <button class="button1" onclick="addInput(7)">7</button>
-  <button class="button1" onclick="addInput(8)">8</button>
-  <button class="button1" onclick="addInput(9)">9</button>
-  <button class="button1" onclick="addInput(0)">0</button>
-  <button class="button1" onclick="addInput(Clear)">Clear</button>
-  <button class="button1" onclick="addInput(Enter)">Enter</button>
-</div>
-
-<div class="fifthscreen">
-    <p id="input"></p>
-    <button class="button" onclick="moneyuse(widthdraw)">Widthdraw</button>
-    <button class="button" onclick="moneyuse(checkbalance)">Checkbalance</button>
-    <button class="button" onclick="moneyuse(fastcash)">FastCash</button>
-    <button class="button" onclick="moneyuse(deposit)">Deposit</button>
-</div>
-
-<div class="sixthscreen">
-    <p id="input"></p>
-    <button class="button" onclick="cORs(saving)">Saving</button>
-    <button class="button" onclick="cORs(checking)">Checking</button>
-</div>
-
-
-<div class="seventhscreen">
-    <button class="button" onclick="process(20)">20</button>
-    <button class="button" onclick="process(40)">40</button>
-    <button class="button" onclick="process(60)">60</button>
-    <button class="button" onclick="process(80)">80</button>
-    <button class="button" onclick="process(other)">Other</button>
-</div>
-
-<div class="eighthscreen">
-    <button class="button" onclick="exitatm(startover)">Start Over</button>
-    <button class="button" onclick="exitatm(balance)">Balance/Recipt</button>
-    <button class="button" onclick="exitatm(exit)">Exit</button>
-</div>-->
 <script src="atm.js"></script>
 <script>
 var yourcard = {
@@ -130,7 +77,6 @@ function languagechoice() {
     }
     }
     function blindcheck(ans) {
-       
         if (ans === "yes") {
             output.innerHTML = "Wrong Answer Try Again";
         }
